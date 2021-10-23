@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+  database:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017

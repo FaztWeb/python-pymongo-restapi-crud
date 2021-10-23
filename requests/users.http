@@ -1,0 +1,35 @@
+@api = http://localhost:3000/users
+
+### get users
+GET {{api}}
+
+### create user
+
+POST {{api}}
+Content-Type: application/json
+
+{
+  "username": "fazt",
+  "email": "fazt@gmail.com",
+  "password": "faztpassword"
+}
+
+### get single user
+
+GET {{api}}/61739ba713715cdb939882cc
+
+### update single user
+PUT {{api}}/61739ba713715cdb939882cc
+Content-Type: application/json
+
+{
+  "username": "Ryan",
+  "email": "ryan@gmail.com",
+  "password": "ryanpassword"
+}
+
+### delete single user
+DELETE  {{api}}/61739ba713715cdb939882cc
+
+### 404
+GET http://localhost:3000/asdasdad

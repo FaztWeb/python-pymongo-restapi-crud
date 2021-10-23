@@ -2,7 +2,6 @@ from flask import Flask, jsonify, request, Response
 from flask_pymongo import PyMongo
 from bson import json_util
 from bson.objectid import ObjectId
-import json
 
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -10,7 +9,7 @@ app = Flask(__name__)
 
 app.secret_key = 'myawesomesecretkey'
 
-app.config['MONGO_URI'] = 'mongodb://localhost:27017/pythonmongodb'
+app.config['MONGO_URI'] = 'mongodb://database/pythonmongodb'
 
 mongo = PyMongo(app)
 
@@ -89,4 +88,4 @@ def not_found(error=None):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=3000)

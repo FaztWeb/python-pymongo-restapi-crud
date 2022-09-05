@@ -1,5 +1,6 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import List
+
 from dataclasses_json import dataclass_json
 
 
@@ -9,8 +10,8 @@ class Task:
     projectstageid = None
     managerid = None
     ownerid = None
-    tasknotes: List = None
-    keywords: List = None
+    notes: List[str] = field(default_factory=lambda: [])
+    keywords: List[str] = field(default_factory=lambda: [])
     taskstage: str = None
     description: str = None
     type_task: str = None

@@ -14,10 +14,5 @@ def wrap_response(func):
             print(err.__class__.__name__, file=sys.stderr)
             traceback.print_exc()
             print("-" * 60)
-        # finally:
-        #     return json.dumps(
-        #         response,
-        #         default=json_default,
-        #     ).encode("utf-8")
 
     return inner_function

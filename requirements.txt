@@ -13,3 +13,6 @@ regex==2021.10.23
 tomli==1.2.1
 typing-extensions==3.10.0.2
 Werkzeug==2.0.2
+flask_pymongo
+dataclasses
+dataclasses_json

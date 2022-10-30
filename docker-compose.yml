@@ -3,10 +3,14 @@ version: "3.9"
 services:
   web:
     build: .
+    volumes:
+      - .:/code
     ports:
       - "3000:3000"
   database:
     image: mongo
     restart: always
+    volumes:
+      - ./mongo:/data/db:rw
     ports:
       - 27017:27017
